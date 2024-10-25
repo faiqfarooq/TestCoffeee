@@ -1,0 +1,119 @@
+:root {
+  /* Colors */
+  --primary-color: #1A0F07;
+  --secondary-color: #E6BC8B;
+  --hover-color: #D4A97A;
+  --white: #FFFFFF;
+  --bg-light: #FDFBF7;
+  --text-gray: #666666;
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Playfair Display', serif; 
+  /* Transitions */
+  --transition-fast: 300ms;
+  --transition-medium: 500ms;
+  --transition-slow: 1000ms; 
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 20px 20px 60px rgba(0, 0, 0, 0.1);
+}
+/* Custom Animations */
+.animate-fade-in {
+  animation: fadeIn var(--transition-slow) ease-in;
+}
+.animate-fade-in-up {
+  animation: fadeInUp var(--transition-slow) ease-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-color);
+}
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+/* Menu Section */
+.category-btn.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.menu-item:hover img {
+  transform: scale(1.1);
+  transition: transform var(--transition-medium) ease;
+}
+/* About Section */
+#about-image img {
+  box-shadow: var(--shadow-lg);
+}
+#coffee-stats {
+  animation: fadeInUp var(--transition-slow) ease-out;
+}
+/* Gallery Section */
+.gallery-item img {
+  filter: brightness(0.9);
+  transition: filter var(--transition-fast) ease;
+}
+.gallery-item:hover img {
+  filter: brightness(0.7);
+}
+/* Testimonials Section */
+.testimonial-card {
+  transform: scale(0.95);
+  transition: transform var(--transition-fast) ease;
+}
+.testimonial-card:hover {
+  transform: scale(1);
+}
+/* Contact Section */
+.contact-input:focus {
+  box-shadow: 0 0 0 2px rgba(230, 188, 139, 0.3);
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .testimonials-container {
+      overflow-x: hidden;
+  }
+
+  .testimonial-card {
+      width: 100%;
+  }
+}
+/* Utility Classes */
+.slide-in {
+  animation: slideIn var(--transition-fast) ease-out;
+}

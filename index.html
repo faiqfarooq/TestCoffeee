@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIMIHORT - Premium Coffee Shop</title>
+  <meta name="description"
+    content="Experience the finest coffee at TIMIHORT. We serve premium coffee varieties, artisanal beverages, and delightful treats.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index8.css">
+</head>
+
+<body id="body-main" class="font-[Poppins] bg-[#FDFBF7]">
+  <!-- Navigation -->
+  <nav id="main-nav" class="fixed w-full z-50 bg-opacity-95 bg-[#1A0F07] text-white">
+    <div id="nav-container" class="container mx-auto px-4">
+      <div id="nav-content" class="flex justify-between items-center py-4">
+        <!-- SVG Logo -->
+        <div id="nav-logo" class="flex items-center space-x-2">
+          <svg id="coffee-logo" width="48" height="48" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto">
+            <!-- Simple Coffee Cup -->
+            <path d="M4 7h12v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V7z" fill="#E6BC8B" />
+            <!-- Handle -->
+            <path d="M16 8h2a2 2 0 1 1 0 4h-2" stroke="#E6BC8B" stroke-width="1.5" />
+            <!-- Steam Lines -->
+            <path d="M7 4.5v-2M10 5v-2M13 4.5v-2" stroke="#E6BC8B" stroke-width="1" stroke-linecap="round" />
+          </svg>
+          <span id="nav-logo-text" class="font-[Playfair Display] text-2xl font-bold text-[#E6BC8B]">TIMIHORT</span>
+        </div>
+        <!-- Desktop Menu -->
+        <div id="desktop-menu" class="hidden md:flex space-x-8">
+          <a id="nav-home" href="#home" class="hover:text-[#E6BC8B] transition-colors duration-300">Home</a>
+          <a id="nav-menu" href="#menu" class="hover:text-[#E6BC8B] transition-colors duration-300">Menu</a>
+          <a id="nav-about" href="#about" class="hover:text-[#E6BC8B] transition-colors duration-300">About</a>
+          <a id="nav-gallery" href="#gallery" class="hover:text-[#E6BC8B] transition-colors duration-300">Gallery</a>
+          <a id="nav-contact" href="#contact" class="hover:text-[#E6BC8B] transition-colors duration-300">Contact</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+          <svg id="mobile-menu-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="mobile-menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16m-16 6h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <a id="mobile-nav-home" href="#home"
+          class="block py-2 hover:text-[#E6BC8B] transition-colors duration-300">Home</a>
+        <a id="mobile-nav-menu" href="#menu"
+          class="block py-2 hover:text-[#E6BC8B] transition-colors duration-300">Menu</a>
+        <a id="mobile-nav-about" href="#about"
+          class="block py-2 hover:text-[#E6BC8B] transition-colors duration-300">About</a>
+        <a id="mobile-nav-gallery" href="#gallery"
+          class="block py-2 hover:text-[#E6BC8B] transition-colors duration-300">Gallery</a>
+        <a id="mobile-nav-contact" href="#contact"
+          class="block py-2 hover:text-[#E6BC8B] transition-colors duration-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+    style="background-image: url('https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+    <div id="hero-overlay" class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div id="hero-content" class="relative z-10 text-center text-white px-4">
+      <h1 id="hero-title" class="font-[Playfair Display] text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+        Welcome to TIMIHORT
+      </h1>
+      <p id="hero-subtitle" class="text-xl md:text-2xl mb-8 animate-fade-in-up">
+        Experience the perfect blend of artistry and flavor
+      </p>
+      <div id="hero-cta" class="space-x-4 animate-fade-in-up">
+        <a id="hero-cta-menu" href="#menu"
+          class="bg-[#E6BC8B] text-[#1A0F07] px-8 py-3 rounded-full font-semibold hover:bg-[#D4A97A] transition-colors duration-300">View
+          Menu</a>
+        <a id="hero-cta-contact" href="#contact"
+          class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#1A0F07] transition-colors duration-300">Contact
+          Us</a>
+      </div>
+    </div>
+  </section>
+  <!-- Scroll Indicator -->
+  <div id="scroll-indicator" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg id="scroll-indicator-icon" class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path id="scroll-indicator-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3">
+      </path>
+    </svg>
+  </div>
+  <!-- Featured Menu Section -->
+  <section id="menu" class="py-20 bg-white">
+    <div id="menu-container" class="container mx-auto px-4">
+      <h2 id="menu-title" class="text-4xl font-[Playfair Display] text-center mb-12">Our Signature Coffee</h2>
+      <!-- Menu Categories -->
+      <div id="menu-categories" class="flex justify-center mb-10 space-x-4 flex-wrap">
+        <button id="menu-category-all" class="category-btn active bg-[#1A0F07] text-white px-6 py-2 rounded-full
+                    hover:bg-[#E6BC8B] transition-colors duration-300">All</button>
+        <button id="menu-category-hot" class="category-btn bg-gray-200 px-6 py-2 rounded-full hover:bg-[#E6BC8B] hover:text-white
+                    transition-colors duration-300">Hot Coffee</button>
+        <button id="menu-category-iced" class="category-btn bg-gray-200 px-6 py-2 rounded-full hover:bg-[#E6BC8B] hover:text-white
+                    transition-colors duration-300">Iced Coffee</button>
+        <button id="menu-category-specialty" class="category-btn bg-gray-200 px-6 py-2 rounded-full hover:bg-[#E6BC8B] hover:text-white
+                    transition-colors duration-300">Specialty</button>
+      </div>
+      <!-- Menu Grid -->
+      <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Menu Item 1 -->
+        <div id="menu-item-1" class="menu-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl
+                    transition-all duration-300">
+          <div id="menu-item-image-container-1" class="relative overflow-hidden">
+            <img id="menu-item-image-1" src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg" alt="Classic
+                            Espresso" class="w-full h-64 object-cover transform group-hover:scale-110
+                            transition-transform duration-300">
+            <div id="menu-item-overlay-1" class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40
+                            transition-all duration-300"></div>
+          </div>
+          <div id="menu-item-content-1" class="p-6">
+            <h3 id="menu-item-title-1" class="text-xl font-semibold mb-2">Classic Espresso</h3>
+            <p id="menu-item-description-1" class="text-gray-600 mb-4">Rich and bold signature espresso shot</p>
+            <div id="menu-item-footer-1" class="flex justify-between items-center">
+              <span id="menu-item-price-1" class="text-xl font-bold text-[#1A0F07]">$3.99</span>
+              <button id="menu-item-order-btn-1" class="order-btn bg-[#E6BC8B] text-white px-4 py-2 rounded-full
+                                hover:bg-[#1A0F07] transition-colors duration-300">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Item 2 -->
+        <div id="menu-item-2" class="menu-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl
+                    transition-all duration-300">
+          <div id="menu-item-image-container-1" class="relative overflow-hidden">
+            <img id="menu-item-image-2" src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg" alt="Classic
+                            Espresso" class="w-full h-64 object-cover transform group-hover:scale-110
+                            transition-transform duration-300">
+            <div id="menu-item-overlay-2" class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40
+                            transition-all duration-300"></div>
+          </div>
+          <div id="menu-item-content-2" class="p-6">
+            <h3 id="menu-item-title-2" class="text-xl font-semibold mb-2">Classic Espresso</h3>
+            <p id="menu-item-description-2" class="text-gray-600 mb-4">Rich and bold signature espresso shot</p>
+            <div id="menu-item-footer-2" class="flex justify-between items-center">
+              <span id="menu-item-price-2" class="text-xl font-bold text-[#1A0F07]">$3.99</span>
+              <button id="menu-item-order-btn-2" class="order-btn bg-[#E6BC8B] text-white px-4 py-2 rounded-full
+                                hover:bg-[#1A0F07] transition-colors duration-300">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Menu Item 3 -->
+        <div id="menu-item-3" class="menu-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl
+                    transition-all duration-300">
+          <div id="menu-item-image-container-1" class="relative overflow-hidden">
+            <img id="menu-item-image-3" src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg" alt="Classic
+                            Espresso" class="w-full h-64 object-cover transform group-hover:scale-110
+                            transition-transform duration-300">
+            <div id="menu-item-overlay-3" class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40
+                            transition-all duration-300"></div>
+          </div>
+          <div id="menu-item-content-3" class="p-6">
+            <h3 id="menu-item-title-3" class="text-xl font-semibold mb-2">Classic Espresso</h3>
+            <p id="menu-item-description-3" class="text-gray-600 mb-4">Rich and bold signature espresso shot</p>
+            <div id="menu-item-footer-3" class="flex justify-between items-center">
+              <span id="menu-item-price-3" class="text-xl font-bold text-[#1A0F07]">$3.99</span>
+              <button id="menu-item-order-btn-3" class="order-btn bg-[#E6BC8B] text-white px-4 py-2 rounded-full
+                                hover:bg-[#1A0F07] transition-colors duration-300">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-[#1A0F07] text-white">
+    <div id="about-container" class="container mx-auto px-4">
+      <div id="about-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div id="about-content" class="space-y-6">
+          <h2 id="about-title" class="text-4xl font-[Playfair Display] mb-6">Our Coffee Story</h2>
+          <p id="about-description" class="text-lg">At TIMIHORT, we believe in the artistry of coffee making. Each cup
+            tells a
+            story of carefully selected beans, expert roasting, and passionate brewing.</p>
+          <div id="coffee-stats" class="grid grid-cols-2 gap-6 mt-8">
+            <div id="coffee-stats-varieties" class="text-center">
+              <span id="coffee-stats-varieties-number" class="block text-4xl font-bold text-[#E6BC8B]">15+</span>
+              <span id="coffee-stats-varieties-label" class="text-sm">Coffee Varieties</span>
+            </div>
+            <div id="coffee-stats-customers" class="text-center">
+              <span id="coffee-stats-customers-number" class="block text-4xl font-bold text-[#E6BC8B]">5000+</span>
+              <span id="coffee-stats-customers-label" class="text-sm">Happy Customers</span>
+            </div>
+          </div>
+          <button id="about-cta" class="mt-8 bg-[#E6BC8B] text-[#1A0F07] px-8 py-3 rounded-full
+                        font-semibold hover:bg-white transition-colors duration-300">Learn More</button>
+        </div>
+        <div id="about-image" class="relative">
+          <img id="about-image-photo" src="https://images.pexels.com/photos/2074130/pexels-photo-2074130.jpeg" alt="Coffee
+                        Making Process" class="rounded-lg shadow-xl">
+          <div id="about-image-caption" class="absolute -bottom-6 -left-6 bg-[#E6BC8B] p-8 rounded-lg">
+            <h3 id="about-image-year" class="text-2xl font-bold">Since 2010</h3>
+            <p id="about-image-caption-text">Serving Premium Coffee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Special Offers Section -->
+  <section id="offers" class="py-20 bg-[#FDFBF7]">
+    <div id="offers-container" class="container mx-auto px-4">
+      <h2 id="offers-title" class="text-4xl font-[Playfair Display] text-center mb-12">Special Offers</h2>
+      <div id="offers-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Offer Card 1 -->
+        <div id="offer-1" class="bg-white rounded-lg shadow-lg overflow-hidden transform
+                    hover:-translate-y-2 transition-transform duration-300">
+          <div id="offer-image-container-1" class="relative">
+            <img id="offer-image-1" src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg" alt="Morning
+                            Special" class="w-full h-48 object-cover">
+            <div id="offer-badge-1" class="absolute top-4 right-4 bg-[#E6BC8B] text-white px-4 py-2 rounded-full">Save
+              20%</div>
+          </div>
+          <div id="offer-content-1" class="p-6">
+            <h3 id="offer-title-1" class="text-xl font-semibold mb-2">Morning Special</h3>
+            <p id="offer-description-1" class="text-gray-600 mb-4">Get any coffee and croissant for a special price
+              before 11
+              AM</p>
+            <button id="offer-btn-1" class="w-full bg-[#1A0F07] text-white py-2 rounded-full hover:bg-[#E6BC8B]
+                            transition-colors duration-300">Claim Offer</button>
+          </div>
+        </div>
+        <!-- More offer cards with similar structure -->
+      </div>
+    </div>
+  </section>
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-20 bg-white">
+    <div id="gallery-container" class="container mx-auto px-4">
+      <h2 id="gallery-title" class="text-4xl font-[Playfair Display] text-center mb-12">Coffee Shop Gallery</h2>
+      <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Gallery Item 1 -->
+        <div id="gallery-item-1" class="gallery-item relative overflow-hidden rounded-lg cursor-pointer group">
+          <img id="gallery-image-1" src="https://images.pexels.com/photos/1855214/pexels-photo-1855214.jpeg"
+            alt="Coffee Shop Interior"
+            class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+          <div id="gallery-overlay-1"
+            class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+            <span id="gallery-caption-1"
+              class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Our
+              Coffee Shop</span>
+          </div>
+        </div>
+          <!-- Gallery Item 2 -->
+          <div id="gallery-item-2" class="gallery-item relative overflow-hidden rounded-lg cursor-pointer group">
+            <img id="gallery-image-2" src="https://images.pexels.com/photos/1855214/pexels-photo-1855214.jpeg"
+              alt="Coffee Shop Interior"
+              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+            <div id="gallery-overlay-2"
+              class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+              <span id="gallery-caption-2"
+                class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Our
+                Coffee Shop</span>
+            </div>
+          </div>
+     <!-- Gallery Item 3 -->
+     <div id="gallery-item-3" class="gallery-item relative overflow-hidden rounded-lg cursor-pointer group">
+      <img id="gallery-image-3" src="https://images.pexels.com/photos/1855214/pexels-photo-1855214.jpeg"
+        alt="Coffee Shop Interior"
+        class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500">
+      <div id="gallery-overlay-3"
+        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+        <span id="gallery-caption-3"
+          class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">Our
+          Coffee Shop</span>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-[#FDFBF7]">
+    <div id="testimonials-container" class="container mx-auto px-4">
+      <h2 id="testimonials-title" class="text-4xl font-[Playfair Display] text-center mb-12">What Our Customers Say</h2>
+      <div id="testimonials-slider" class="relative">
+        <div id="testimonials-content" class="testimonials-container overflow-hidden">
+          <div id="testimonials-list" class="flex transition-transform duration-500">
+            <!-- Testimonial 1 -->
+            <div id="testimonial-1" class="testimonial-card w-full md:w-1/3 flex-shrink-0 px-4">
+              <div id="testimonial-content-1" class="bg-white p-6 rounded-lg shadow-lg">
+                <div id="testimonial-header-1" class="flex items-center mb-4">
+                  <img id="testimonial-image-1" src="https://randomuser.me/api/portraits/women/1.jpg" alt="Customer"
+                    class="w-12 h-12 rounded-full">
+                  <div id="testimonial-info-1" class="ml-4">
+                    <h4 id="testimonial-name-1" class="font-semibold">Sarah Johnson</h4>
+                    <div id="testimonial-rating-1" class="flex text-[#E6BC8B]">
+                      <i id="testimonial-star-1-1" class="fas fa-star"></i>
+                      <i id="testimonial-star-1-2" class="fas fa-star"></i>
+                      <i id="testimonial-star-1-3" class="fas fa-star"></i>
+                      <i id="testimonial-star-1-4" class="fas fa-star"></i>
+                      <i id="testimonial-star-1-5" class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p id="testimonial-text-1" class="text-gray-600">"The best coffee I've ever had! The atmosphere is
+                  perfect
+                  for both work and relaxation."</p>
+              </div>
+            </div>
+            <!-- More testimonials with similar structure -->
+          </div>
+        </div>
+        <button id="prev-testimonial"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-[#E6BC8B] transition-colors duration-300">
+          <i id="prev-testimonial-icon" class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-testimonial"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-[#E6BC8B] transition-colors duration-300">
+          <i id="next-testimonial-icon" class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-[#1A0F07] text-white">
+    <div id="contact-container" class="container mx-auto px-4">
+      <div id="contact-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div id="contact-info" class="space-y-6">
+          <h2 id="contact-title" class="text-4xl font-[Playfair Display] mb-6">Visit Us</h2>
+          <div id="contact-details" class="space-y-4">
+            <p id="contact-address" class="flex items-center">
+              <i id="contact-address-icon" class="fas fa-map-marker-alt w-8"></i>
+              123 Coffee Street, Barista City>
+            </p>
+            <p id="contact-phone" class="flex items-center">
+              <i id="contact-phone-icon" class="fas fa-phone w-8"></i>
+              +1 (555) 123-4567>
+            </p>
+            <p id="contact-email" class="flex items-center">
+              <i id="contact-email-icon" class="fas fa-envelope w-8"></i>
+              info@timihort.com>
+            </p>
+          </div>
+          <div id="contact-hours" class="mt-8">
+            <h3 id="contact-hours-title" class="text-xl mb-4">Opening Hours</h3>
+            <p id="contact-hours-weekdays">Monday - Friday: 7:00 AM - 8:00 PM</p>
+            <p id="contact-hours-weekends">Saturday - Sunday: 8:00 AM - 9:00 PM</p>
+          </div>
+        </div>
+        <form id="contact-form" class="space-y-6">
+          <div id="contact-form-name">
+            <label id="contact-form-name-label" for="name" class="block mb-2">Name</label>
+            <input id="contact-form-name-input" type="text"
+              class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-10 focus:bg-opacity-20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#E6BC8B]"
+              required>
+          </div>
+          <div id="contact-form-email">
+            <label id="contact-form-email-label" for="email" class="block mb-2">Email</label>
+            <input id="contact-form-email-input" type="email"
+              class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-10 focus:bg-opacity-20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#E6BC8B]"
+              required>
+          </div>
+          <div id="contact-form-message">
+            <label id="contact-form-message-label" for="message" class="block mb-2">Message</label>
+            <textarea id="contact-form-message-input" rows="4"
+              class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-10 focus:bg-opacity-20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#E6BC8B]"
+              required></textarea>
+          </div>
+          <button id="contact-form-submit" type="submit"
+            class="w-full bg-[#E6BC8B] text-[#1A0F07] py-3 rounded-lg font-semibold hover:bg-white transition-colors duration-300">Send
+            Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer id="footer" class="bg-[#1A0F07] text-white pt-12 pb-6">
+    <div id="footer-container" class="container mx-auto px-4">
+      <div id="footer-grid" class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div id="footer-about">
+          <h3 id="footer-about-title" class="text-xl font-[Playfair Display] mb-4">TIMIHORT</h3>
+          <p id="footer-about-text" class="text-gray-400">Crafting perfect moments, one cup at a time.</p>
+        </div>
+        <div id="footer-links">
+          <h4 id="footer-links-title" class="text-lg mb-4">Quick Links</h4>
+          <ul id="footer-links-list" class="space-y-2 text-gray-400">
+            <li id="footer-link-menu"><a href="#menu"
+                class="hover:text-[#E6BC8B] transition-colors duration-300">Menu</a></li>
+            <li id="footer-link-about"><a href="#about"
+                class="hover:text-[#E6BC8B] transition-colors duration-300">About</a></li>
+            <li id="footer-link-gallery"><a href="#gallery"
+                class="hover:text-[#E6BC8B] transition-colors duration-300">Gallery</a></li>
+            <li id="footer-link-contact"><a href="#contact"
+                class="hover:text-[#E6BC8B] transition-colors duration-300">Contact</a></li>
+          </ul>
+        </div>
+        <div id="footer-social">
+          <h4 id="footer-social-title" class="text-lg mb-4">Follow Us</h4>
+          <div id="footer-social-icons" class="flex space-x-4">
+            <a id="footer-social-facebook" href="#"
+              class="text-gray-400 hover:text-[#E6BC8B] transition-colors duration-300"><i
+                class="fab fa-facebook-f"></i></a>
+            <a id="footer-social-instagram" href="#"
+              class="text-gray-400 hover:text-[#E6BC8B] transition-colors duration-300"><i
+                class="fab fa-instagram"></i></a>
+            <a id="footer-social-twitter" href="#"
+              class="text-gray-400 hover:text-[#E6BC8B] transition-colors duration-300"><i
+                class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div id="footer-newsletter">
+          <h4 id="footer-newsletter-title" class="text-lg mb-4">Newsletter</h4>
+          <form id="newsletter-form" class="space-y-4">
+            <input id="newsletter-email" type="email" placeholder="Your email"
+              class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-10 focus:bg-opacity-20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#E6BC8B]">
+            <button id="newsletter-submit" type="submit"
+              class="w-full bg-[#E6BC8B] text-[#1A0F07] py-2 rounded-lg font-semibold hover:bg-white transition-colors duration-300">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div id="footer-copyright" class="border-t border-gray-800 pt-6 text-center text-gray-400">
+        <p id="footer-copyright-text">&copy; 2024 TIMIHORT. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Testimonials Slider
+    const testimonialsContainer = document.querySelector('.testimonials-container');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const prevButton = document.getElementById('prev-testimonial');
+    const nextButton = document.getElementById('next-testimonial');
+    let currentIndex = 0;
+
+    function updateSlider() {
+      const offset = currentIndex * -100;
+      testimonialsContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = Math.max(currentIndex - 1, 0);
+      updateSlider();
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = Math.min(currentIndex + 1, testimonialCards.length - 1);
+      updateSlider();
+    });
+
+    // Form Validation
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Add your form submission logic here
+      alert('Thank you for your message! We will get back to you soon.');
+      contactForm.reset();
+    });
+
+    // Newsletter Form
+    const newsletterForm = document.getElementById('newsletter-form');
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for subscribing to our newsletter!');
+      newsletterForm.reset();
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
